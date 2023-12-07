@@ -30,6 +30,7 @@ final class Esent_Submit {
         
         $this->include();
         $this->define();
+        $this->hooks();
     }
 
     /**
@@ -46,6 +47,13 @@ final class Esent_Submit {
         define( 'ESS', __FILE__ );
         define( 'ESS_DIR', dirname( ESS ) );
         define( 'ESS_ASSET', plugins_url( 'assets', ESS ) );
+    }
+
+    /**
+     * All hooks
+     */
+    private function hooks() {
+
     }
 
     /**
