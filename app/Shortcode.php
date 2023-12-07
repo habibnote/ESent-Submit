@@ -56,9 +56,6 @@ class Shortcode {
             wp_send_json_success();
             die();
         }
-
-        wp_send_json_success();
-        die();
     }
 
     /**
