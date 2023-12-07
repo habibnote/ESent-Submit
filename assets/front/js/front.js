@@ -36,4 +36,6 @@ jQuery(function($){
             
         });
     });
+
+    console.log(ESS_ajax);
 });
