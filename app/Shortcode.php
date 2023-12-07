@@ -19,6 +19,8 @@ class Shortcode {
      * main shortcode
      */
     public function ess_main_shortcode() {
-        echo "Hello";
+        ob_start();
+        include_once( ESS_DIR . "/views/form/ess-form.php" );
+        return ob_get_clean();
     }
 }
