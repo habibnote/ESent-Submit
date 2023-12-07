@@ -47,8 +47,17 @@ jQuery(function($){
                     ess_email: essEmail,
                 },
                 success: function(response) {
+                    console.log( response );
                     // Handle the response from the server
-                    console.log(response);
+                    if( response.success == true ) {
+                        $('#ess-name').val('');
+                        $('#ess-email').val('');
+
+                        $('.ess-preview').hide();
+                        $('.ess-form').hide();
+
+                        $('.ess-success').text("Data has been submitted");
+                    }
                 }
             });
         });

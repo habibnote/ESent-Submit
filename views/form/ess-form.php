@@ -22,3 +22,5 @@
         <button type="button" id="ess_submit"><?php esc_html_e( 'Submit', 'e-sent' )?></button>
     </p>
 </div>
+
+<p style="text-align: center; color:green;" class="ess-success"></p>
