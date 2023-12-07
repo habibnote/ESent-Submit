@@ -1,4 +1,4 @@
-<form>
+<div class="ess-form">
     <p>
         <label for="ess-name"><?php esc_html_e( 'Name', 'e-sent' );?></label>
         <input type="text" id="ess-name">
@@ -10,4 +10,11 @@
     <p>
         <button type="button" id="ess-preview"><?php esc_html_e( 'Preview', 'e-sent' ); ?></button>
     </p>
-</form>
+    <p style="color:red" id="ess-message"></p>
+</div>
+
+<div class="ess-preview">
+    <h2><?php esc_html_e( 'Preview Your Submitted Value' ); ?></h2>
+    <p><?php esc_attr_e( 'Name: ', 'e-sent' ); ?> <strong class="esc_preview_name"></strong></p>
+    <p><?php esc_attr_e( 'Email: ', 'e-sent' ); ?> <strong class="esc_preview_email"></strong></p>
+</div>
