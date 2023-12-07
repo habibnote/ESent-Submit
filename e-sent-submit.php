@@ -54,6 +54,7 @@ final class Esent_Submit {
      */
     private function hooks() {
         new App\Admin();
+        new App\Front();
     }
 
     /**
