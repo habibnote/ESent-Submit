@@ -24,6 +24,31 @@ final class Esent_Submit {
     static $instance = false;
 
     /**
+     * class constructor
+     */
+    private function __construct() {
+        
+        $this->include();
+        $this->define();
+    }
+
+    /**
+     * Include all needed files
+     */
+    public function include() {
+
+    }
+
+    /**
+     * define all constant
+     */
+    private function define() {
+        define( 'ESS', __FILE__ );
+        define( 'ESS_DIR', dirname( ESS ) );
+        define( 'ESS_ASSET', plugins_url( 'assets', ESS ) );
+    }
+
+    /**
      * Singleton Instance
     */
     static function get_esent_plugin() {
