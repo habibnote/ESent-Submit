@@ -1,0 +1,14 @@
+{
+    "authors": [
+        {
+            "name": "habibnote",
+            "email": "habibur.tj@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Habib\\E_Sent_Submit\\" : "",
+            "Habib\\E_Sent_Submit\\App\\" : "app/"
+        }
+    }
+}

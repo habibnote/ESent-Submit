@@ -37,7 +37,7 @@ final class Esent_Submit {
      * Include all needed files
      */
     public function include() {
-
+        require_once( dirname( __FILE__ ) . '/vendor/autoload.php' );
     }
 
     /**
@@ -53,7 +53,7 @@ final class Esent_Submit {
      * All hooks
      */
     private function hooks() {
-
+        new App\Admin();
     }
 
     /**
