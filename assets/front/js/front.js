@@ -1,15 +1,15 @@
 jQuery(function($){
     $( document ).ready(function() {
 
-        let essName     = $('#ess-name').val();
-        let essEmail    = $('#ess-email').val();
-
         /**
          * click after preview button
          */
         $('#ess-preview').on('click', function(){
+
+            let essName     = $('#ess-name').val();
+            let essEmail    = $('#ess-email').val();
             
-            if( essName == '' && essEmail == '' ) {
+            if( essName === '' && essEmail === '' ) {
                 $('#ess-message').text("Field must not be empty!");
             }else{
                 $('.ess-form').hide();
@@ -33,6 +33,10 @@ jQuery(function($){
          * click after submit button
          */
         $('#ess_submit').on('click', function(){
+
+            let essName     = $('#ess-name').val();
+            let essEmail    = $('#ess-email').val();
+
             $.ajax({
                 url: ESS_ajax.url,
                 type: 'POST',
