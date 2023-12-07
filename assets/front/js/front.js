@@ -1,14 +1,14 @@
 jQuery(function($){
     $( document ).ready(function() {
 
+        let essName     = $('#ess-name').val();
+        let essEmail    = $('#ess-email').val();
+
         /**
          * click after preview button
          */
         $('#ess-preview').on('click', function(){
             
-            let essName     = $('#ess-name').val();
-            let essEmail    = $('#ess-email').val();
-
             if( essName == '' && essEmail == '' ) {
                 $('#ess-message').text("Field must not be empty!");
             }else{
@@ -33,9 +33,20 @@ jQuery(function($){
          * click after submit button
          */
         $('#ess_submit').on('click', function(){
-            
+            $.ajax({
+                url: ESS_ajax.url,
+                type: 'POST',
+                data: {
+                    action: 'ess_form_submit',
+                    nonce: ESS_ajax.nonce,
+                    ess_name: essName,
+                    ess_email: essEmail,
+                },
+                success: function(response) {
+                    // Handle the response from the server
+                    console.log(response);
+                }
+            });
         });
     });
-
-    console.log(ESS_ajax);
 });
