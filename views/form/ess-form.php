@@ -17,4 +17,8 @@
     <h2><?php esc_html_e( 'Preview Your Submitted Value' ); ?></h2>
     <p><?php esc_attr_e( 'Name: ', 'e-sent' ); ?> <strong class="esc_preview_name"></strong></p>
     <p><?php esc_attr_e( 'Email: ', 'e-sent' ); ?> <strong class="esc_preview_email"></strong></p>
+    <p>
+        <button type="button" id="ess_preview"><?php esc_html_e( 'Back', 'e-sent' )?></button>
+        <button type="button" id="ess_submit"><?php esc_html_e( 'Submit', 'e-sent' )?></button>
+    </p>
 </div>

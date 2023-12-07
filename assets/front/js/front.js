@@ -20,5 +20,17 @@ jQuery(function($){
             }
 
         });
+
+        /**
+         * click after back button
+         */
+        $('#ess_preview').on('click', function(){
+            $('.ess-form').show();
+            $('.ess-preview').hide();
+        });
+
+        /**
+         * click after submit button
+         */
     });
 });
