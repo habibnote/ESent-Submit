@@ -35,13 +35,21 @@ class Shortcode {
 
         }
 
-        $to = 'sendto@example.com';
-        $subject = 'The subject';
-        $body = 'The email body content';
-        $headers = array('Content-Type: text/html; charset=UTF-8');
+        $to         = $admin_email;
+        $subject    = 'Submit a new Form by' . $ess_name;
+        $body       = sprintf(
+            "Name : %s<br>
+            Email : %s<br>",
+            $ess_name,
+            $ess_email
+        );
+        $headers    = array('Content-Type: text/html; charset=UTF-8');
 
-        wp_mail( $to, $subject, $body, $headers );
+        $sent = wp_mail( $to, $subject, $body, $headers );
 
+        if( $sent ) {
+            wp_send_json_success();
+        }
     }
 
     /**
