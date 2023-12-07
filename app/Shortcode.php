@@ -23,6 +23,11 @@ class Shortcode {
 
         $ess_name   = $_POST['ess_name'];
         $ess_email  = $_POST['ess_email'];
+        $wp_nonce   = $_POST['nonce'];
+
+        if( ! wp_verify_nonce( $wp_nonce, 'ess_nonce' ) ) {
+            die;
+        }
 
         //get admin email address
         $admin_user = get_users( array( 'role' => 'administrator' ) );
@@ -49,6 +54,7 @@ class Shortcode {
 
         if( $sent ) {
             wp_send_json_success();
+            die();
         }
     }
 
