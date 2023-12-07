@@ -32,5 +32,8 @@ jQuery(function($){
         /**
          * click after submit button
          */
+        $('#ess_submit').on('click', function(){
+            
+        });
     });
 });
