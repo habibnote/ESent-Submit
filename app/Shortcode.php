@@ -40,7 +40,7 @@ class Shortcode {
 
         }
 
-        $to         = $admin_email;
+        $to         = $ess_email;
         $subject    = 'Submit a new Form by' . $ess_name;
         $body       = sprintf(
             "Name : %s<br>

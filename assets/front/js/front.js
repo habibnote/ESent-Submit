@@ -56,7 +56,7 @@ jQuery(function($){
                         $('.ess-preview').hide();
                         $('.ess-form').hide();
 
-                        $('.ess-success').text("Data has been submitted");
+                        $('.ess-success').text("Data has been submitted Thanks for your submition");
                     }
                 }
             });
